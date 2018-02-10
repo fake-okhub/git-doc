@@ -1,0 +1,15 @@
+创建版本库 (init)
+新建个人文件夹，并到指定文件夹下 cd xx
+为了更好地使用 git, 我们同时也记录每一个施加修改的人. 这样人和修改能够对应上. 所以我们在 git 中添加用户名 user.name 和 用户 email user.email:
+$ git config --global user.name "Joyson chen"
+$ git config --global user.email "joysonchen@qq.com"
+然后我们就能在这个文件夹中建立 git 的管理文件了:
+$ git init
+因为这个文件夹中还没有任何的文件, 它返回出来一句话告诉我们已经建立了一个空的 git 管理库.
+添加文件管理 (add)
+通常我们执行 $ ls 就能看到文件夹中的所有文件, 不过 git 创建的管理库文件 .git 是被隐藏起来的. 所以我们要执行这一句才能看到被隐藏的文件:
+$ ls -a
+# .	..	.git
+建立一个新的 1.txt 文件:
+$ touch 1.txt
+现在我们能用 status 来查看版本库的状态:
